@@ -4,6 +4,7 @@ defineOptions({
 })
 
 const name = $ref('')
+const init = ref(new Date().getDay())
 
 const router = useRouter()
 const go = () => {
@@ -23,6 +24,10 @@ const go = () => {
     <p>
       <em text-sm op75>Opinionated Vite Starter Template</em>
     </p>
+
+    <div py-4 />
+
+    <TheCounter :initial="init" />
 
     <div py-4 />
 
